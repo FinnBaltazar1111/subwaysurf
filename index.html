@@ -1,15 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Subway Surfers</title>
-        <style type="text/css">
-            body, html
-            {
-                margin: 0; padding: 0; height: 100%; overflow: hidden;
-            }
-        </style>
-    </head>
-    <body>
-        <iframe width="100%" height="100%" src="https://5dd312fa-015f-11ea-ad56-9cb6d0d995f7.poki-gdn.com/0e0ff019-bad9-4472-8d1e-47eda2be21f1/index.html" />
-    </body>
+<!DOCTYPE html><html><body><script>!function(){"use strict";function e(e,t){e=e.replace(/[[]/,"\\[").replace(/[\]]/,"\\]");var n=new RegExp("[\\?&]".concat(e,"=([^&#]*)")).exec(t);return null===n?"":decodeURIComponent(n[1].replace(/\+/g," "))}function t(e){window.parent.postMessage({type:"SaveGameMigrator",content:e},"*")}function n(e,n){console.error(e,n);try{t({event:"error",error:JSON.stringify({error:n,where:e})})}catch(e){console.error(e)}}var o=e("previous",document.location.search),r=e("unity-only",document.location.search),a=e("next",document.location.search);window.onerror=function(e){n("onerror",e),setTimeout((function(){window.location.replace(a)}),10)},window.onunhandledrejection=function(e){n("onunhandledrejection",e),setTimeout((function(){window.location.replace(a)}),10)},t({event:"start"}),function(e,t){return new Promise((function(o){window.addEventListener("message",(function(e){(e.origin.endsWith(".poki-gdn.com")||e.origin.endsWith(".poki.com")||/^https?:\/\/localhost(?::\d+)?$/.test(e.origin))&&(e.data.savegames?(Object.entries(e.data.savegames.ls).forEach((function(e){var t=e[0],o=e[1];try{localStorage.setItem(t,o)}catch(e){n("ls",e)}})),e.data.savegames.idb?Promise.all(e.data.savegames.idb.map((function(e){return t=e,console.info("poki-savegame-importing",t.name,t.store,t.version,t.rows.length),new Promise((function(e){if(t.name)try{var o=window.indexedDB.open(t.name,t.version);o.onerror=function(t){n("open",t),e()},o.onupgradeneeded=function(o){var r=o.target.result;try{if("/idbfs"===t.name||"/data"===t.name){var a=void 0;(a=r.objectStoreNames.contains(t.store)?o.target.transaction.objectStore(t.store):r.createObjectStore(t.store)).indexNames.contains("timestamp")||a.createIndex("timestamp","timestamp",{unique:!1})}else r.createObjectStore(t.store)}catch(t){n("onupgradeneeded",t),e()}},o.onsuccess=function(){var r,a,i=o.result,c=0,s=function(){if(c>=t.rows.length)e();else{var o=t.rows[c++],a=r.put(o.v,o.k);a.onerror=function(t){n("put",t),e()},a.onsuccess=function(){s()}}};try{(a=i.transaction([t.store],"readwrite")).onerror=function(t){n("transaction",t),e()},r=a.objectStore(t.store)}catch(t){return n("objectStore",t),void e()}s()}}catch(t){n("idb",t),e()}else e()}));var t}))).then((function(){o()})).catch((function(e){n("promise",e),o()})):o()):e.data.error&&(n("export",e.data.error),e.data.failed&&o()))}),!1);var r=window.location.href.substr(0,window.location.href.lastIndexOf("/")),a=document.createElement("iframe");a.setAttribute("style","border: none; width: 1px; height: 1px;"),a.src="".concat(e,"/poki-savegame-export.html?newpath=").concat(encodeURIComponent(r)).concat(t?"&unityonly":""),document.body.appendChild(a)}))}(o,r).then((function(){window.location.replace(a)})),window.setTimeout((function(){t({event:"timeout"}),setTimeout((function(){window.location.replace(a)}),10)}),3e3)}();
+</script></body>
+<title>Subway Surfers</title>
 </html>
